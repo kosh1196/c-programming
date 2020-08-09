@@ -1,10 +1,23 @@
-Grading at Sun Aug  9 06:46:02 UTC 2020
+Grading at Sun Aug  9 06:50:39 UTC 2020
 Checking code2.c for legal syntax
-temp.c: In function ‘main’:
-temp.c:46:47: error: ‘nnumStars’ undeclared (first use in this function)
-   printf("That triangle had %d total stars\n",nnumStars);
-                                               ^
-temp.c:46:47: note: each undeclared identifier is reported only once for each function it appears in
-The code did not have legal syntax!
+Checking for int printTriangle (int size)
+Found on line 4, column 1 
+Checking for int main(void)
+Found on line 35, column 1 
+Trying to run the code..
+Your file matched the expected output
+Removing your main() and replacing it with our own to run more tests...
+Testing printTriangle(0) ... Correct
+Testing printTriangle(1) ... Correct
+Testing printTriangle(2) ... Correct
+Testing printTriangle(3) ... Correct
+Testing printTriangle(4) ... Correct
+Testing printTriangle(7) ... Correct
+Testing printTriangle(9) ... Correct
+Testing printTriangle(12) ... Correct
+Testing printTriangle(80) ... Correct
+Testing printTriangle(166) ... Correct
+Testing printTriangle(758) ... Correct
+Testing printTriangle(2360) ... Correct
 
-Overall Grade: F
+Overall Grade: A

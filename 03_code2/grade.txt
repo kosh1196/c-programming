@@ -1,10 +1,10 @@
-Grading at Sun Aug  9 06:43:03 UTC 2020
+Grading at Sun Aug  9 06:46:02 UTC 2020
 Checking code2.c for legal syntax
 temp.c: In function ‘main’:
-temp.c:46:48: error: ‘nnumStars’ undeclared (first use in this function)
-   printf("That triangle had %d total stars\n", nnumStars);
-                                                ^
-temp.c:46:48: note: each undeclared identifier is reported only once for each function it appears in
+temp.c:46:47: error: ‘nnumStars’ undeclared (first use in this function)
+   printf("That triangle had %d total stars\n",nnumStars);
+                                               ^
+temp.c:46:47: note: each undeclared identifier is reported only once for each function it appears in
 The code did not have legal syntax!
 
 Overall Grade: F

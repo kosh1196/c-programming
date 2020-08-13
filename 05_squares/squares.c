@@ -9,7 +9,7 @@
  */
 int isInRange(int coord, int offset, int size) {
   // if coord is in range, return 1
-  if(coord<=offset && coord<(offset + size))
+  if(coord>=offset && coord<(offset + size))
     {
       return 1;
     }
@@ -39,7 +39,7 @@ int max(int m , int n)
     {
       return m;}
   else{
-    return 0;}
+    return n;}
 }
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
@@ -47,10 +47,10 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (y_offset + size2).  Call this h
   int h = max(size1 , (y_offset+size2));
   //count from 0 to h. Call the number you count with y
-  for(int y; y<h; y++)
+  for(int y=0; y<h; y++)
     {
     //count from 0 to w. Call the number you count with x
-      for(int x; x<w; x++)
+      for(int x=0; x<w; x++)
 	{
 	
       //check if  EITHER
@@ -60,7 +60,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //    ((y is between y_offset and y_offset + size2) AND
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
-	  if(((isInRange(x, x_offset,(x_offset+ size2))) && (isAtBorder(y, y_offset ,(y_offset+size2-1)))) || ((isInRange(y, y_offset,(y_offset+ size2))) && (isAtBorder(x, x_offset, (x_offset+size2-1)))))
+	  if(((isInRange(x, x_offset, size2)) && (isAtBorder(y, y_offset ,(size2-1)))) || ((isInRange(y,  y_offset ,size2)) && (isAtBorder(x, x_offset, (size2-1)))))
 	    {
 	      printf("*");}
       //if not,
@@ -69,7 +69,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       // OR
       //    y is less than size1 AND (x is either 0 or size1-1)
       //if so, print a #
-	 if(((x<size1) && (y==0 || y==size1-1)) || (((y<size1) && ( x==0 || x==size1-1))))
+	  else  if(((x<size1) && (y==0 || y==(size1-1))) || (((y<size1) && ( x==0 || x==(size1-1)))))
 	    {
 	      printf("#");}
 	  
@@ -80,5 +80,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
     //print a newline
 	}
       printf("\n");
+     
     }
+
 }

@@ -16,14 +16,80 @@ int max (int a, int b) {
 }
 
 //Declare your rectangle structure here!
-
+typedef struct rectangle
+{
+  int x;
+  int y;
+  int width;
+  int height;
+}rectangle;
 
 rectangle canonicalize(rectangle r) {
   //WRITE THIS FUNCTION
+  if(r.width<0)
+    {r.x = r.x + r.width;
+      r.width = -1 * r.width;
+    }
+  if(r.height<0)
+    {r.y = r.y + r.height;
+      r.height = -1*r.height;
+    }
   return r;
 }
 rectangle intersection(rectangle r1, rectangle r2) {
   //WRITE THIS FUNCTION
+  r1 = canonicalize(r1);
+  r2 = canonicalize(r2);
+  rectangle ans;
+  ans.x = max(r1.x,r2.x);
+  ans.y = max(r1.y,r2.y);
+  if(r1.x>r2.x)
+    {
+      if((r1.x+r1.width)>(r2.x+r2.width))
+	{
+	  ans.width = (r2.x+r2.width)-r1.x;
+
+	}
+      else
+	{
+	  ans.width = (r1.x+r1.width)-r2.x;
+	}
+     }
+  else
+    {
+      if((r1.x+r1.width)<(r2.x+r2.width))
+	{
+	  ans.width = (r1.x+r1.width)-r2.x; 
+	}
+      else
+	{
+	  ans.width = (r2.x+r2.width)-r1.x; 
+	}
+    }
+  if(r1.y>r2.y)
+    {
+      if((r1.y+r1.height)>(r2.x+r2.height))
+	{
+	  ans.height = (r2.y+r2.height)-r1.y;
+
+	}
+      else
+	{
+	  ans.height = (r1.y+r1.height)-r2.y;
+	}
+     }
+  else
+    {
+      if((r1.y+r1.height)<(r2.y+r2.height))
+	{
+	  ans.height = (r1.y+r1.height)-r2.y; 
+	}
+      else
+	{
+	  ans.height = (r2.y+r2.height)-r1.y;
+	}
+      
+    }
   return r1;
 }
 

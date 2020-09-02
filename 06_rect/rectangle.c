@@ -43,54 +43,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
   r2 = canonicalize(r2);
   ans.x = max(r1.x,r2.x);
   ans.y = max(r1.y,r2.y);
-  /* if(r1.x>r2.x)
-    {
-      if((r1.x+r1.width)>(r2.x+r2.width))
-	{
-	  if(
-	  ans.width = (r2.x+r2.width)-r1.x;
 
-	}
-      else
-	{
-	  ans.width = (r1.x+r1.width)-r2.x;
-	}
-     }
-  else
-    {
-      if((r1.x+r1.width)<(r2.x+r2.width))
-	{
-	  ans.width = (r1.x+r1.width)-r2.x; 
-	}
-      else
-	{
-	  ans.width = (r2.x+r2.width)-r1.x; 
-	}
-    }
-  if(r1.y>r2.y)
-    {
-      if((r1.y+r1.height)>(r2.x+r2.height))
-	{
-	  ans.height = (r2.y+r2.height)-r1.y;
-
-	}
-      else
-	{
-	  ans.height = (r1.y+r1.height)-r2.y;
-	}
-     }
-  else
-    {
-      if((r1.y+r1.height)<(r2.y+r2.height))
-	{
-	  ans.height = (r1.y+r1.height)-r2.y; 
-	}
-      else
-	{
-	  ans.height = (r2.y+r2.height)-r1.y;
-	}
-      
-	}*/
   if(r1.x>r2.x)
     {
       if((r2.x+r2.width)>=(r1.x+r1.width))

@@ -50,22 +50,15 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	{
 	  ans.width= r1.width;
 	}
-      else
-	{
+      else{
 	  if(r1.x==r2.x)
 	    {
 	      ans.width = min(r1.width,r2.width);
 	    }
 	  else
 	    {
-	      if((r1.x+r1.width==0)||(r2.x+r2.width==0))
-		{
-		  ans.width=0;
-		}
-	      else
-		{
-		  ans.width = (r2.x+r2.width)-r1.x;
-		}
+	        ans.width = (r2.x+r2.width)-r1.x;
+	
 	    }
 	}
     }

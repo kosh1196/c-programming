@@ -104,7 +104,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
     }  
  
   return ans;
-  return r1;
+  //  return r1;
 }
 
 //You should not need to modify any code below this line

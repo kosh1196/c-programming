@@ -43,8 +43,12 @@ rectangle intersection(rectangle r1, rectangle r2) {
   r2 = canonicalize(r2);
   ans.x = max(r1.x,r2.x);
   ans.y = max(r1.y,r2.y);
-
-  if(r1.x>r2.x)
+  if((r1.x+r1.width)<r2.x || (r2.x+r2.width)<r1.x || (r1.y+r1.height)<r2.y || (r2.y+r2.height)<r1.y)
+    { ans.width = 0;
+      ans. height = 0;
+    }
+  else{
+      if(r1.x>r2.x)
     {
       if((r2.x+r2.width)>=(r1.x+r1.width))
 	{
@@ -90,10 +94,11 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	  ans.height = (r1.y+r1.height)-r2.y;
 	  }
     }  
- 
+  } 
   return ans;
   return r1;
 }
+
 //You should not need to modify any code below this line
 void printRectangle(rectangle r) {
   r = canonicalize(r);

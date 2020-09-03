@@ -51,6 +51,8 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	  ans.width= r1.width;
 	}
       else{
+	if((r2.x+r2.width)-r1.x>=r1.x){
+	  ans.width=0;}
 	ans.width = (r2.x+r2.width)-r1.x;
 	  }
     }

@@ -57,8 +57,14 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	    }
 	  else
 	    {
-	        ans.width = (r2.x+r2.width)-r1.x;
-	
+	      if((r1.width+r2.width)==1)
+		{
+		  ans.width=0;
+		}
+	      else
+	        {
+		  ans.width = (r2.x+r2.width)-r1.x;
+		}	
 	    }
 	}
     }

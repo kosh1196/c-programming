@@ -52,7 +52,7 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	  ans.width= r1.width;
 	}
       else{
-	if(r1.x>(r2.x+r2.width)){
+	if(r1.x>=(r2.x+r2.width)){
 	  ans.width=0;}
 	else{
 	  ans.width = (r2.x+r2.width)-r1.x;
@@ -66,8 +66,11 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	}
       else
 	{
+	  if(r2.x>=(r1.x+r1.width)){
+	    ans.width=0;}
+	  else{
 	  ans.width = (r1.x+r1.width)-r2.x;
-	}
+	  }}
     }
    if(r1.y>r2.y)
     {
@@ -77,8 +80,11 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	}
       else
 	{
+	  if(r1.y>=(r2.y+r2.height)){
+	    ans.height=0;}
+	  else{
 	    ans.height = (r2.y+r2.height)-r1.y;
-	 
+	  }
 	}
     }
   else
@@ -89,8 +95,11 @@ rectangle intersection(rectangle r1, rectangle r2) {
 	}
       else
 	{
+	  if(r2.y>=(r1.y+r1.height))
+	    {ans.height=0;}
+	  else{
 	  ans.height = (r1.y+r1.height)-r2.y;
-	}
+	  }}
     }  
  
   return ans;

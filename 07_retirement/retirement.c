@@ -32,7 +32,7 @@ int calculator (int startAge, double initial, retire_info status) {
 
     balance = balance + interest + status.contribution;
 
-    printf("Age %3d month %2d you have %.2f\n", years, mon, balance);
+    printf("Age %3d month %2d you have %.21f\n", years, mon, balance);
 
     currentAge++;
 
@@ -44,7 +44,7 @@ int calculator (int startAge, double initial, retire_info status) {
 
 void retirement (int startAge, double initial, retire_info working, retire_info retired) {
 
-  printf("Age %3d month %2d you have %.2f\n", startAge / 12, startAge % 12, initial);
+  printf("Age %3d month %2d you have %.21f\n", startAge / 12, startAge % 12, initial);
 
   double finalBalance = calculator(328, 21345, working);
 
@@ -64,7 +64,7 @@ int main (void) {
 
   retire_info retired;
 
-  retired.months = 383;
+  retired.months = 384;
 
   retired.contribution = (-4000);
 

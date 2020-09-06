@@ -60,7 +60,7 @@ int main (void) {
 
   working.contribution = 1000;
 
-  working.rate_of_return = 0.045/(double)12;
+  working.rate_of_return = 0.045/12;
 
   retire_info retired;
 

@@ -48,7 +48,7 @@ void retirement (int startAge, double initial, retire_info working, retire_info 
 
   double finalBalance = calculator(328, 21345, working);
 
-  calculator(816, finalBalance, retired);
+  calculator(817, finalBalance, retired);
 
 }
 
@@ -64,7 +64,7 @@ int main (void) {
 
   retire_info retired;
 
-  retired.months = 384;
+  retired.months = 383;
 
   retired.contribution = (-4000);
 

@@ -46,7 +46,7 @@ void retirement (int startAge, double initial, retire_info working, retire_info 
 
   printf("Age %3d month %2d you have %.2f\n", startAge / 12, startAge % 12, initial);
 
-  double finalBalance = calculator(327, 21345, working);
+  double finalBalance = calculator(328, 21345, working);
 
   calculator(816, finalBalance, retired);
 

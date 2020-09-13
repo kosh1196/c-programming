@@ -15,9 +15,9 @@ const char * ranking_to_string(hand_ranking_t r) {
   case FOUR_OF_A_KIND: return("FOUR_OF_A_KIND"); break;
   case  FULL_HOUSE: return("FULL_HOUSE"); break;
   case  FLUSH: return("FLUSH"); break;
-  case  STRAIGHT: return("STRAIGHTn"); break;
+  case  STRAIGHT: return("STRAIGHT"); break;
   case  THREE_OF_A_KIND: return("THREE_OF_A_KIND"); break;
-  case  TWO_PAIR: return("TWO_PAIR\n"); break;
+  case  TWO_PAIR: return("TWO_PAIR"); break;
   case  PAIR: return("PAIR"); break;
   case    NOTHING: return("NOTHING"); break;
   default: return(" Invalid rank "); break;

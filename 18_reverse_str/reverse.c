@@ -4,7 +4,22 @@
 
 void reverse(char * str) {
   //WRITE ME!
-}
+  if ((str == NULL) || (*str == '\0'))
+    return;
+
+  int len = strlen(str);
+  char *ptr1 = str;
+  char *ptr2 = str + (len-1);
+  char temp;
+  for(int i=0; i<(len/2); i++)
+    {
+      temp = *ptr1;
+      *ptr1 = *ptr2;
+      *ptr2 = temp;
+      ptr1++;
+      ptr2--;
+    }
+    }
 
 int main(void) {
   char str0[] = "";

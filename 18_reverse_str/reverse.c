@@ -10,7 +10,7 @@ void reverse(char * str) {
   int len = strlen(str);
   char *ptr1 = str;
   char *ptr2 = str + (len-1);
-  char temp;
+    char temp;
   for(int i=0; i<(len/2); i++)
     {
       temp = *ptr1;

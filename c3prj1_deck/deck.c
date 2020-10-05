@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "deck.h"
 void print_hand(deck_t * hand){
-  for(int i; i< hand->n_cards; i++){
+  for(int i=0; i< hand->n_cards; i++){
     print_card(*hand->cards[i]);
     printf(" ");
   }
@@ -16,8 +16,7 @@ int deck_contains(deck_t * d, card_t c) {
     if(c.value == curr->value && c.suit == curr->suit){
       return 1;
     }
-    return 0;
-  }
+   }
   return 0;
 }
 
@@ -25,7 +24,7 @@ void shuffle(deck_t * d){
   card_t *swap = NULL;
   int random = 0;
   int cards = d->n_cards;
-  for(int i; i<cards; i++){
+  for(int i=0; i<cards; i++){
     random = rand() % cards;
     swap = d->cards[i];
     d->cards[i] = d->cards[random];

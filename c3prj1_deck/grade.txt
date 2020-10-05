@@ -1,14 +1,14 @@
-Grading at Mon Oct  5 06:44:38 UTC 2020
+Grading at Mon Oct  5 06:56:07 UTC 2020
 Compiling deck.c
-deck.c: In function ‘print_hand’:
-deck.c:6:15: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
-   for(int i; i< hand->n_cards; i++){
-               ^
-deck.c: In function ‘shuffle’:
-deck.c:28:11: error: ‘i’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
-   for(int i; i<cards; i++){
-           ^
-cc1: all warnings being treated as errors
-Could not compile your deck.c!
+Compiling cards.c
+Linking cards.o deck.o deck-c4.o and the grader's .o file
+Checking the output of all the functions other than shuffle
+Your file matched the expected output
+ - Those functions seem to work!
+Checking your shuffle results with a 6 card hand...
+  Least common hand: 0.131800%
+  Most  common hand: 0.146250%
+  Perfectly even is: 0.138888%
+ Excellent!
 
-Overall Grade: FAILED
+Overall Grade: A

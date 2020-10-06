@@ -139,13 +139,13 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   if(hand_1.ranking < hand_2.ranking)
     return 1;
-  else
+  else if (hand_1.ranking > hand_2.ranking)
     return -1;
 
   for(int i = 0; i<5; i++){
     if(hand_1.cards[i]->value> hand_2.cards[i]->value)
       return 1;
-    else
+    else if(hand_1.cards[i]->value < hand_2.cards[i]->value)
       return -1;
   }
 

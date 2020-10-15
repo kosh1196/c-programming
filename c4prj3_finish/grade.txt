@@ -1,5 +1,6 @@
-Grading at Thu Oct 15 07:11:23 UTC 2020
+Grading at Thu Oct 15 07:12:54 UTC 2020
 Running 'make clean' to do a clean build of your project
+rm -rf *.o poker *~
 Running 'make poker OTHERFLAGS=-O3' to build your project
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o cards.o cards.c
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o deck.o deck.c
@@ -8,7 +9,7 @@ gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o future.o future.c
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o input.o input.c
 gcc -Wall -Werror -ggdb3 -std=gnu99 -pedantic -O3   -c -o main.o main.c
 gcc -o poker main.c
-/tmp/ccHpZ53T.o: In function `main':
+/tmp/ccoss35q.o: In function `main':
 main.c:(.text+0x105): undefined reference to `read_input'
 main.c:(.text+0x11f): undefined reference to `build_remaining_deck'
 main.c:(.text+0x192): undefined reference to `shuffle'

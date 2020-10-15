@@ -1,0 +1,10 @@
+Grading at Thu Oct 15 06:42:48 UTC 2020
+Running 'make clean' to do a clean build of your project
+Running 'make poker OTHERFLAGS=-O3' to build your project
+gcc -o poker -Wall -Werror pedantic -std=gnu99 main.c
+gcc: error: pedantic: No such file or directory
+makefile:2: recipe for target 'poker' failed
+make: *** [poker] Error 1
+make failed
+
+Overall Grade: F

@@ -11,16 +11,16 @@
 int win_hand(deck_t ** deck_array,int n_hands){
   int w[n_hands+1];
   for(int u=0;u<n_hands+1;u++) w[u]=0;
-  // int v=0;
+   int v=0;
   for(int i =0;i<n_hands-1;i++){
     for (int j=i+1;j<n_hands;j++){
-      // print_hand(deck_array[i]);
-      //            print_hand(deck_array[j]);
-      // printf("\n");
-      //  v=compare_hands(deck_array[i],deck_array[j]);
-      // if(v>0) w[i]++;
-      // else if (v<0) w[j]++;
-      // else w[n_hands]++;
+       print_hand(deck_array[i]);
+                  print_hand(deck_array[j]);
+       printf("\n");
+        v=compare_hands(deck_array[i],deck_array[j]);
+       if(v>0) w[i]++;
+       else if (v<0) w[j]++;
+       else w[n_hands]++;
     }
   }
   unsigned largest= 0;
